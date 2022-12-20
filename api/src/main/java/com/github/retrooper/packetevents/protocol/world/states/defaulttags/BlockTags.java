@@ -251,7 +251,7 @@ public class BlockTags {
         BlockTags.BEACON_BASE_BLOCKS.add(StateTypes.NETHERITE_BLOCK, StateTypes.EMERALD_BLOCK, StateTypes.DIAMOND_BLOCK, StateTypes.GOLD_BLOCK, StateTypes.IRON_BLOCK);
         BlockTags.SOUL_SPEED_BLOCKS.add(StateTypes.SOUL_SAND, StateTypes.SOUL_SOIL);
         BlockTags.WALL_POST_OVERRIDE.add(StateTypes.TORCH, StateTypes.SOUL_TORCH, StateTypes.REDSTONE_TORCH, StateTypes.TRIPWIRE).addTag(BlockTags.SIGNS).addTag(BlockTags.BANNERS).addTag(BlockTags.PRESSURE_PLATES);
-        BlockTags.CLIMBABLE.add(StateTypes.LADDER, StateTypes.VINE, StateTypes.SCAFFOLDING, StateTypes.WEEPING_VINES, StateTypes.WEEPING_VINES_PLANT, StateTypes.TWISTING_VINES, StateTypes.TWISTING_VINES_PLANT, StateTypes.CAVE_VINES, StateTypes.CAVE_VINES_PLANT);
+        BlockTags.CLIMBABLE.add(StateTypes.BAMBOO, StateTypes.CHAIN, StateTypes.LADDER, StateTypes.VINE, StateTypes.SCAFFOLDING, StateTypes.WEEPING_VINES, StateTypes.WEEPING_VINES_PLANT, StateTypes.TWISTING_VINES, StateTypes.TWISTING_VINES_PLANT, StateTypes.CAVE_VINES, StateTypes.CAVE_VINES_PLANT);
         BlockTags.PIGLIN_REPELLENTS.add(StateTypes.SOUL_FIRE).add(StateTypes.SOUL_TORCH).add(StateTypes.SOUL_LANTERN).add(StateTypes.SOUL_WALL_TORCH).add(StateTypes.SOUL_CAMPFIRE);
         BlockTags.HOGLIN_REPELLENTS.add(StateTypes.WARPED_FUNGUS).add(StateTypes.POTTED_WARPED_FUNGUS).add(StateTypes.NETHER_PORTAL).add(StateTypes.RESPAWN_ANCHOR);
         BlockTags.GOLD_ORES.add(StateTypes.GOLD_ORE, StateTypes.NETHER_GOLD_ORE, StateTypes.DEEPSLATE_GOLD_ORE);
