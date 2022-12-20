@@ -964,6 +964,17 @@ public class StateTypes {
     public static StateType PEARLESCENT_FROGLIGHT = StateTypes.builder().name("PEARLESCENT_FROGLIGHT").blastResistance(0.3f).hardness(0.3f).isOccluding(true).isBlocking(true).setMaterial(MaterialType.FROGLIGHT).isSolid(true).build();
     public static StateType FROGSPAWN = StateTypes.builder().name("FROGSPAWN").blastResistance(0.0f).hardness(0.0f).isOccluding(false).isBlocking(false).setMaterial(MaterialType.FROGSPAWN).isSolid(false).build();
 
+    //1.19.3
+    public static StateType CRIMSON_WALL_HANGING_SIGN = StateTypes.builder().name("CRIMSON_WALL_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isSolid(true).isBlocking(true).setMaterial(MaterialType.NETHER_WOOD).build();
+    public static StateType WARPED_WALL_HANGING_SIGN = StateTypes.builder().name("WARPED_WALL_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isSolid(true).isBlocking(true).setMaterial(MaterialType.NETHER_WOOD).build();
+    public static StateType OAK_WALL_HANGING_SIGN = StateTypes.builder().name("OAK_WALL_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isFlammable(true).isSolid(true).isBlocking(true).setMaterial(MaterialType.WOOD).build();
+    public static StateType SPRUCE_WALL_HANGING_SIGN = StateTypes.builder().name("SPRUCE_WALL_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isFlammable(true).isSolid(true).isBlocking(true).setMaterial(MaterialType.WOOD).build();
+    public static StateType BIRCH_WALL_HANGING_SIGN = StateTypes.builder().name("BIRCH_WALL_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isFlammable(true).isSolid(true).isBlocking(true).setMaterial(MaterialType.WOOD).build();
+    public static StateType ACACIA_WALL_HANGING_SIGN = StateTypes.builder().name("ACACIA_WALL_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isFlammable(true).isSolid(true).isBlocking(true).setMaterial(MaterialType.WOOD).build();
+    public static StateType JUNGLE_WALL_HANGING_SIGN = StateTypes.builder().name("JUNGLE_WALL_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isFlammable(true).isSolid(true).isBlocking(true).setMaterial(MaterialType.WOOD).build();
+    public static StateType DARK_OAK_WALL_HANGING_SIGN = StateTypes.builder().name("DARK_OAK_WALL_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isFlammable(true).isSolid(true).isBlocking(true).setMaterial(MaterialType.WOOD).build();
+    public static StateType MANGROVE_WALL_HANGING_SIGN = StateTypes.builder().name("MANGROVE_WALL_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isFlammable(true).isSolid(true).isBlocking(true).setMaterial(MaterialType.WOOD).build();
+
     public static Builder builder() {
         return new Builder();
     }
