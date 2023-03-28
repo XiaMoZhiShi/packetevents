@@ -73,9 +73,14 @@ public class WrappedBlockState {
 
         if (data != null) {
             for (String s : data) {
-                String[] split = s.split("=");
-                StateValue value = StateValue.byName(split[0]);
-                this.data.put(value, value.getParser().apply(split[1].toUpperCase(Locale.ROOT)));
+                try {
+                    String[] split = s.split("=");
+                    StateValue value = StateValue.byName(split[0]);
+                    this.data.put(value, value.getParser().apply(split[1].toUpperCase(Locale.ROOT)));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    System.out.println("Failed to parse block state: " + s);
+                }
             }
         }
 
@@ -92,10 +97,20 @@ public class WrappedBlockState {
     }
 
     @NotNull
+    public static WrappedBlockState getByGlobalId(int globalID) {
+        return getByGlobalId(PacketEvents.getAPI().getServerManager().getVersion().toClientVersion(), globalID);
+    }
+
+    @NotNull
     public static WrappedBlockState getByGlobalId(ClientVersion version, int globalID) {
         if (globalID == 0) return AIR; // Hardcode for performance
         byte mappingsIndex = getMappingsIndex(version);
         return BY_ID.get(mappingsIndex).getOrDefault(globalID, AIR).clone();
+    }
+
+    @NotNull
+    public static WrappedBlockState getByString(String string) {
+        return getByString(PacketEvents.getAPI().getServerManager().getVersion().toClientVersion(), string);
     }
 
     @NotNull
@@ -105,12 +120,17 @@ public class WrappedBlockState {
     }
 
     @NotNull
+    public static WrappedBlockState getDefaultState(StateType type) {
+        return getDefaultState(PacketEvents.getAPI().getServerManager().getVersion().toClientVersion(), type);
+    }
+
+    @NotNull
     public static WrappedBlockState getDefaultState(ClientVersion version, StateType type) {
         if (type == StateTypes.AIR) return AIR;
         byte mappingsIndex = getMappingsIndex(version);
         WrappedBlockState state = DEFAULT_STATES.get(mappingsIndex).get(type);
         if (state == null) {
-            PacketEvents.getAPI().getLogger().warning("Default state for " + type.getName() + " is null. Returning AIR");
+            PacketEvents.getAPI().getLogger().config("Default state for " + type.getName() + " is null. Returning AIR");
             return AIR;
         }
         return state.clone();
@@ -133,10 +153,12 @@ public class WrappedBlockState {
             return 6;
         } else if (version.isOlderThanOrEquals(ClientVersion.V_1_18_2)) {
             return 7;
-        } else if (version.isOlderThanOrEquals(ClientVersion.V_1_19_1)){
+        } else if (version.isOlderThanOrEquals(ClientVersion.V_1_19_1)) {
             return 8;
+        } else if (version.isOlderThanOrEquals(ClientVersion.V_1_19_3)) {
+            return 9;
         }
-        return 9;
+        return 10;
     }
 
     private static void loadLegacy() {
