@@ -16,54 +16,55 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.github.retrooper.packetevents.wrapper.login.server;
+
+package com.github.retrooper.packetevents.wrapper.play.server;
 
 import com.github.retrooper.packetevents.event.PacketSendEvent;
-import com.github.retrooper.packetevents.protocol.ConnectionState;
+import com.github.retrooper.packetevents.protocol.chat.Node;
 import com.github.retrooper.packetevents.protocol.packettype.PacketType;
 import com.github.retrooper.packetevents.wrapper.PacketWrapper;
-import net.kyori.adventure.text.Component;
 
-/**
- * This packet is used by the server to disconnect the client while in the {@link ConnectionState#LOGIN} connection state.
- */
-public class WrapperLoginServerDisconnect extends PacketWrapper<WrapperLoginServerDisconnect> {
-    private Component reason;
+import java.util.List;
 
-    public WrapperLoginServerDisconnect(PacketSendEvent event) {
+public class WrapperPlayServerDeclareCommands extends PacketWrapper<WrapperPlayServerDeclareCommands> {
+    private List<Node> nodes;
+    private int rootIndex;
+
+    public WrapperPlayServerDeclareCommands(PacketSendEvent event) {
         super(event);
     }
 
-    public WrapperLoginServerDisconnect(Component reason) {
-        super(PacketType.Login.Server.DISCONNECT);
-        this.reason = reason;
+    public WrapperPlayServerDeclareCommands(List<Node> nodes, int rootIndex) {
+        super(PacketType.Play.Server.DECLARE_COMMANDS);
+        this.nodes = nodes;
+        this.rootIndex = rootIndex;
     }
 
     @Override
     public void read() {
-        this.reason = readComponent();
+        nodes = readList(PacketWrapper::readNode);
+        rootIndex = readVarInt();
     }
 
     @Override
     public void write() {
-        writeComponent(reason);
+        writeList(nodes, PacketWrapper::writeNode);
+        writeVarInt(rootIndex);
     }
 
-    @Override
-    public void copy(WrapperLoginServerDisconnect wrapper) {
-        this.reason = wrapper.reason;
+    public List<Node> getNodes() {
+        return nodes;
     }
 
-    /**
-     * The reason the server disconnected the client. (Specified by the server)
-     *
-     * @return Disconnection reason
-     */
-    public Component getReason() {
-        return reason;
+    public void setNodes(List<Node> nodes) {
+        this.nodes = nodes;
     }
 
-    public void setReason(Component reason) {
-        this.reason = reason;
+    public int getRootIndex() {
+        return rootIndex;
+    }
+
+    public void setRootIndex(int rootIndex) {
+        this.rootIndex = rootIndex;
     }
 }
