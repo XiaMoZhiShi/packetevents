@@ -1027,53 +1027,8 @@ public class StateTypes {
     public static StateType POTTED_AZALEA_BUSH = StateTypes.builder().name("POTTED_AZALEA_BUSH").blastResistance(0.0f).hardness(0.0f).isBlocking(false).requiresCorrectTool(false).isSolid(true).setMaterial(MaterialType.DECORATION).build();
     public static StateType POTTED_FLOWERING_AZALEA_BUSH = StateTypes.builder().name("POTTED_FLOWERING_AZALEA_BUSH").blastResistance(0.0f).hardness(0.0f).isBlocking(false).requiresCorrectTool(false).isSolid(true).setMaterial(MaterialType.DECORATION).build();
 
-    //1.19.3
-    public static StateType PIGLIN_HEAD = StateTypes.builder().name("PIGLIN_HEAD").blastResistance(1.0f).hardness(1.0f).setMaterial(MaterialType.DECORATION).isSolid(true).build();
-
-    public static StateType CHISELED_BOOKSHELF = StateTypes.builder().name("CHISELED_BOOKSHELF").blastResistance(2.0f).hardness(2.0f).isBurnable(true).isFlammable(true).isOccluding(true).isBlocking(true).setMaterial(MaterialType.WOOD).isSolid(true).build();
-
-    public static StateType CRIMSON_HANGING_SIGN = StateTypes.builder().name("CRIMSON_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isSolid(false).isBlocking(true).setMaterial(MaterialType.NETHER_WOOD).build();
-    public static StateType WARPED_HANGING_SIGN = StateTypes.builder().name("WARPED_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isSolid(false).isBlocking(true).setMaterial(MaterialType.NETHER_WOOD).build();
-    public static StateType OAK_HANGING_SIGN = StateTypes.builder().name("OAK_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isFlammable(true).isSolid(false).isBlocking(true).setMaterial(MaterialType.WOOD).build();
-    public static StateType SPRUCE_HANGING_SIGN = StateTypes.builder().name("SPRUCE_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isFlammable(true).isSolid(false).isBlocking(true).setMaterial(MaterialType.WOOD).build();
-    public static StateType BIRCH_HANGING_SIGN = StateTypes.builder().name("BIRCH_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isFlammable(true).isSolid(false).isBlocking(true).setMaterial(MaterialType.WOOD).build();
-    public static StateType ACACIA_HANGING_SIGN = StateTypes.builder().name("ACACIA_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isFlammable(true).isSolid(false).isBlocking(true).setMaterial(MaterialType.WOOD).build();
-    public static StateType JUNGLE_HANGING_SIGN = StateTypes.builder().name("JUNGLE_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isFlammable(true).isSolid(false).isBlocking(true).setMaterial(MaterialType.WOOD).build();
-    public static StateType DARK_OAK_HANGING_SIGN = StateTypes.builder().name("DARK_OAK_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isFlammable(true).isSolid(false).isBlocking(true).setMaterial(MaterialType.WOOD).build();
-    public static StateType MANGROVE_HANGING_SIGN = StateTypes.builder().name("MANGROVE_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isFlammable(true).isSolid(false).isBlocking(true).setMaterial(MaterialType.WOOD).build();
-    public static StateType BAMBOO_HANGING_SIGN = StateTypes.builder().name("BAMBOO_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isFlammable(true).isSolid(false).isBlocking(true).setMaterial(MaterialType.WOOD).build();
-
-    public static StateType CRIMSON_WALL_HANGING_SIGN = StateTypes.builder().name("CRIMSON_WALL_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isSolid(true).isBlocking(true).setMaterial(MaterialType.NETHER_WOOD).build();
-    public static StateType WARPED_WALL_HANGING_SIGN = StateTypes.builder().name("WARPED_WALL_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isSolid(true).isBlocking(true).setMaterial(MaterialType.NETHER_WOOD).build();
-    public static StateType OAK_WALL_HANGING_SIGN = StateTypes.builder().name("OAK_WALL_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isFlammable(true).isSolid(true).isBlocking(true).setMaterial(MaterialType.WOOD).build();
-    public static StateType SPRUCE_WALL_HANGING_SIGN = StateTypes.builder().name("SPRUCE_WALL_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isFlammable(true).isSolid(true).isBlocking(true).setMaterial(MaterialType.WOOD).build();
-    public static StateType BIRCH_WALL_HANGING_SIGN = StateTypes.builder().name("BIRCH_WALL_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isFlammable(true).isSolid(true).isBlocking(true).setMaterial(MaterialType.WOOD).build();
-    public static StateType ACACIA_WALL_HANGING_SIGN = StateTypes.builder().name("ACACIA_WALL_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isFlammable(true).isSolid(true).isBlocking(true).setMaterial(MaterialType.WOOD).build();
-    public static StateType JUNGLE_WALL_HANGING_SIGN = StateTypes.builder().name("JUNGLE_WALL_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isFlammable(true).isSolid(true).isBlocking(true).setMaterial(MaterialType.WOOD).build();
-    public static StateType DARK_OAK_WALL_HANGING_SIGN = StateTypes.builder().name("DARK_OAK_WALL_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isFlammable(true).isSolid(true).isBlocking(true).setMaterial(MaterialType.WOOD).build();
-    public static StateType MANGROVE_WALL_HANGING_SIGN = StateTypes.builder().name("MANGROVE_WALL_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isFlammable(true).isSolid(true).isBlocking(true).setMaterial(MaterialType.WOOD).build();
-    public static StateType BAMBOO_WALL_HANGING_SIGN = StateTypes.builder().name("BAMBOO_WALL_HANGING_SIGN").blastResistance(1.0f).hardness(1.0f).isFlammable(true).isSolid(true).isBlocking(true).setMaterial(MaterialType.WOOD).build();
-
-    public static StateType BAMBOO_BLOCK = StateTypes.builder().name("BAMBOO_BLOCK").blastResistance(2.0f).hardness(2.0f).isBurnable(true).isFlammable(true).isOccluding(true).isBlocking(true).setMaterial(MaterialType.WOOD).isSolid(true).build();
-    public static StateType STRIPPED_BAMBOO_BLOCK = StateTypes.builder().name("STRIPPED_BAMBOO_BLOCK").blastResistance(2.0f).hardness(2.0f).isBurnable(true).isFlammable(true).isOccluding(true).isBlocking(true).setMaterial(MaterialType.WOOD).isSolid(true).build();
-    public static StateType BAMBOO_PLANKS = StateTypes.builder().name("BAMBOO_PLANKS").blastResistance(3.0f).hardness(2.0f).isBurnable(true).isFlammable(true).isOccluding(true).isBlocking(true).setMaterial(MaterialType.WOOD).isSolid(true).build();
-    public static StateType BAMBOO_PRESSURE_PLATE = StateTypes.builder().name("BAMBOO_PRESSURE_PLATE").blastResistance(0.5f).hardness(0.5f).isFlammable(true).isSolid(true).isBlocking(true).setMaterial(MaterialType.WOOD).setPushReaction(PushReaction.DESTROY).build();
-    public static StateType BAMBOO_TRAPDOOR = StateTypes.builder().name("BAMBOO_TRAPDOOR").blastResistance(3.0f).hardness(3.0f).isFlammable(true).isBlocking(true).setMaterial(MaterialType.WOOD).isSolid(true).build();
-    public static StateType BAMBOO_FENCE_GATE = StateTypes.builder().name("BAMBOO_FENCE_GATE").blastResistance(3.0f).hardness(2.0f).isBurnable(true).isFlammable(true).isBlocking(true).isShapeExceedsCube(true).setMaterial(MaterialType.WOOD).isSolid(true).build();
-    public static StateType BAMBOO_FENCE = StateTypes.builder().name("BAMBOO_FENCE").blastResistance(3.0f).hardness(2.0f).isBurnable(true).isFlammable(true).isBlocking(true).isShapeExceedsCube(true).setMaterial(MaterialType.WOOD).isSolid(true).build();
-    public static StateType BAMBOO_SLAB = StateTypes.builder().name("BAMBOO_SLAB").blastResistance(3.0f).hardness(2.0f).isBurnable(true).isFlammable(true).isBlocking(true).setMaterial(MaterialType.WOOD).isSolid(true).build();
-    public static StateType BAMBOO_BUTTON = StateTypes.builder().name("BAMBOO_BUTTON").blastResistance(0.5f).hardness(0.5f).setMaterial(MaterialType.DECORATION).build();
-    public static StateType BAMBOO_STAIRS = StateTypes.builder().name("BAMBOO_STAIRS").blastResistance(3.0f).hardness(2.0f).isBurnable(true).isFlammable(true).isBlocking(true).setMaterial(MaterialType.WOOD).isSolid(true).build();
-    public static StateType BAMBOO_DOOR = StateTypes.builder().name("BAMBOO_DOOR").blastResistance(3.0f).hardness(3.0f).isFlammable(true).isBlocking(true).setMaterial(MaterialType.WOOD).setPushReaction(PushReaction.DESTROY).isSolid(true).build();
-
-    public static StateType BAMBOO_SIGN = StateTypes.builder().name("BAMBOO_SIGN").blastResistance(1.0f).hardness(1.0f).isFlammable(true).isSolid(false).isBlocking(true).setMaterial(MaterialType.WOOD).build();
-
-    public static StateType BAMBOO_WALL_SIGN = StateTypes.builder().name("BAMBOO_WALL_SIGN").blastResistance(1.0f).hardness(1.0f).isFlammable(true).isSolid(false).isBlocking(true).setMaterial(MaterialType.WOOD).build();
-
-    public static StateType BAMBOO_MOSAIC = StateTypes.builder().name("BAMBOO_MOSAIC").blastResistance(3.0f).hardness(2.0f).isBurnable(true).isFlammable(true).isOccluding(true).isBlocking(true).setMaterial(MaterialType.WOOD).isSolid(true).build();
-    public static StateType BAMBOO_MOSAIC_PLANKS = StateTypes.builder().name("BAMBOO_MOSAIC_PLANKS").blastResistance(3.0f).hardness(2.0f).isBurnable(true).isFlammable(true).isOccluding(true).isBlocking(true).setMaterial(MaterialType.WOOD).isSolid(true).build();
-    public static StateType BAMBOO_MOSAIC_SLAB = StateTypes.builder().name("BAMBOO_MOSAIC_SLAB").blastResistance(3.0f).hardness(2.0f).isBurnable(true).isFlammable(true).isBlocking(true).setMaterial(MaterialType.WOOD).isSolid(true).build();
-    public static StateType BAMBOO_MOSAIC_STAIRS = StateTypes.builder().name("BAMBOO_MOSAIC_STAIRS").blastResistance(3.0f).hardness(2.0f).isBurnable(true).isFlammable(true).isBlocking(true).setMaterial(MaterialType.WOOD).isSolid(true).build();
+    // xiamo: Bamboo mosaic planks
+    public static StateType BAMBOO_MOSAIC_PLANKS = StateTypes.builder().name("BAMBOO_MOSAIC_PLANKS").blastResistance(3.0f).hardness(2.0f).isBlocking(true).setMaterial(MaterialType.WOOD).isSolid(true).build();
 
     public static Builder builder() {
         return new Builder();
