@@ -21,6 +21,7 @@ package com.github.retrooper.packetevents.protocol.item.enchantment.type;
 import com.github.retrooper.packetevents.PacketEvents;
 import com.github.retrooper.packetevents.protocol.nbt.NBT;
 import com.github.retrooper.packetevents.protocol.nbt.NBTCompound;
+import com.github.retrooper.packetevents.protocol.nbt.serializer.SequentialNBTReader;
 import com.github.retrooper.packetevents.protocol.player.ClientVersion;
 import com.github.retrooper.packetevents.resources.ResourceLocation;
 import com.github.retrooper.packetevents.util.mappings.MappingHelper;
@@ -45,7 +46,7 @@ public final class EnchantmentTypes {
 
     static {
         ENCHANTMENT_DATA = new HashMap<>();
-        NBTCompound dataTag = MappingHelper.decompress("mappings/enchantment/enchantment_type_data");
+        NBTCompound dataTag = MappingHelper.decompress("mappings/enchantment/enchantment_type_data").readFully();
         for (Map.Entry<String, NBT> entry : dataTag.getTags().entrySet()) {
             if (entry.getKey().equals("version")) {
                 continue; // skip version field

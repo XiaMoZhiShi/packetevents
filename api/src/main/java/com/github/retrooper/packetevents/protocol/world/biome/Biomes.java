@@ -40,7 +40,7 @@ public final class Biomes {
 
     static {
         BIOME_DATA = new HashMap<>();
-        NBTCompound dataTag = MappingHelper.decompress("mappings/world/biome_data");
+        NBTCompound dataTag = MappingHelper.decompress("mappings/world/biome_data").readFully();
         for (Map.Entry<String, NBT> entry : dataTag.getTags().entrySet()) {
             if (entry.getKey().equals("version")) {
                 continue; // skip version field
